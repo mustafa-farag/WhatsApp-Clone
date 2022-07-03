@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_whatsapp_clone/constant/colors.dart';
 import 'package:responsive_whatsapp_clone/responsive/responsive.dart';
 
 void main() {
@@ -12,9 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'WhatsApp Responsive',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
+        scaffoldBackgroundColor: backgroundColor,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: appBarColor,
+        ),
       ),
       home: const Responsive(),
     );
