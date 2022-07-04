@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_whatsapp_clone/screens/mobile_calls_screen.dart';
 import 'package:responsive_whatsapp_clone/screens/mobile_chats_screen.dart';
-import 'package:responsive_whatsapp_clone/screens/status_screen.dart';
+import 'package:responsive_whatsapp_clone/screens/mobile_status_screen.dart';
 
 class Mobile extends StatefulWidget {
   const Mobile({Key? key}) : super(key: key);
@@ -10,10 +11,10 @@ class Mobile extends StatefulWidget {
 }
 
 class _MobileState extends State<Mobile> {
+  int currentIndex = 0 ;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    int currentIndex = 0;
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -43,7 +44,7 @@ class _MobileState extends State<Mobile> {
           bottom:  TabBar(
             onTap: (index){
               setState((){
-                currentIndex == index;
+                currentIndex = index;
               });
             },
             tabs: const [
@@ -60,14 +61,14 @@ class _MobileState extends State<Mobile> {
             indicatorWeight: 2,
           ),
         ),
-        body: TabBarView(children: [
-          const MobileChatsScreen(),
-          const MobileStatusScreen(),
-          Container(),
+        body: const TabBarView(children: [
+          MobileChatsScreen(),
+          MobileStatusScreen(),
+          MobileCallsScreen(),
         ]),
         floatingActionButton:FloatingActionButton(
           onPressed: () {},
-          child: const Icon(Icons.sms),
+          child:currentIndex == 0 ? const Icon(Icons.sms_rounded) : currentIndex ==1 ? const Icon(Icons.camera_alt):const Icon(Icons.add_call),
         ),
       ),
     );
