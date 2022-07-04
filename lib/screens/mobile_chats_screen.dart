@@ -10,19 +10,30 @@ class MobileChatsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding:  EdgeInsets.all(size.width*0.04),
-      child: ListView.separated(
-          physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) => ChatItem(
-              image: dummyData[index]["image"],
-              radius: size.width * 0.035,
-              name: dummyData[index]['name'],
-              massage: dummyData[index]['massage'],
-              date: dummyData[index]['date'],
-              unRead: dummyData[index]['unRead'],
-              imageRadius: size.width * 0.075),
-          separatorBuilder: (context, index) => const DefaultDivider(),
-          itemCount: dummyData.length),
+      padding: EdgeInsets.all(size.width * 0.04),
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            ListView.separated(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => ChatItem(
+                    image: dummyData[index]["image"],
+                    radius: size.width * 0.035,
+                    name: dummyData[index]['name'],
+                    massage: dummyData[index]['massage'],
+                    date: dummyData[index]['date'],
+                    unRead: dummyData[index]['unRead'],
+                    imageRadius: size.width * 0.075),
+                separatorBuilder: (context, index) => const DefaultDivider(),
+                itemCount: dummyData.length),
+            SizedBox(
+              height: size.height * 0.1,
+            )
+          ],
+        ),
+      ),
     );
   }
 }

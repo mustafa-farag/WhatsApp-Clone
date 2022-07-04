@@ -6,5 +6,5 @@ const appBarColor = Color.fromRGBO(42,47,50,1);
 const messageColor = Color.fromRGBO(5, 97, 98, 1);
 const searchBarColor = Color.fromRGBO(50, 55, 57, 1);
 const searchBarIconColor = Colors.white;
-const textStyle =  TextStyle(color: searchBarIconColor,fontSize: 15);
+const textStyle =  TextStyle(color: searchBarIconColor,fontSize: 17);
 const messageStyle =  TextStyle(color: Colors.grey,fontSize: 15);
