@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_whatsapp_clone/constant/data.dart';
+import 'package:responsive_whatsapp_clone/screens/mobile_chat_details_screen.dart';
 import 'package:responsive_whatsapp_clone/widgets/chat_item.dart';
 import 'package:responsive_whatsapp_clone/widgets/divider.dart';
 
@@ -18,14 +19,22 @@ class MobileChatsScreen extends StatelessWidget {
             ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) => ChatItem(
-                    image: dummyData[index]["image"],
-                    radius: size.width * 0.035,
-                    name: dummyData[index]['name'],
-                    massage: dummyData[index]['massage'],
-                    date: dummyData[index]['date'],
-                    unRead: dummyData[index]['unRead'],
-                    imageRadius: size.width * 0.075),
+                itemBuilder: (context, index) => InkWell(
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MobileChatDetailsScreen(
+                                  imageUrl: dummyData[index]["image"],
+                                  name: dummyData[index]["name"]))),
+                      child: ChatItem(
+                          image: dummyData[index]["image"],
+                          radius: size.width * 0.035,
+                          name: dummyData[index]['name'],
+                          massage: dummyData[index]['massage'],
+                          date: dummyData[index]['date'],
+                          unRead: dummyData[index]['unRead'],
+                          imageRadius: size.width * 0.075),
+                    ),
                 separatorBuilder: (context, index) => const DefaultDivider(),
                 itemCount: dummyData.length),
             SizedBox(

@@ -44,7 +44,7 @@ class CallsItem extends StatelessWidget {
               Row(
                 children: [
                   const Icon(
-                    Icons.compare_arrows,
+                    Icons.call_received_sharp,
                     color: Colors.red,
                   ),
                   SizedBox(width: size.width*0.02,),
