@@ -68,7 +68,7 @@ class _MobileState extends State<Mobile> {
         ]),
         floatingActionButton:FloatingActionButton(
           onPressed: () {},
-          child:currentIndex == 0 ? const Icon(Icons.sms_rounded) : currentIndex ==1 ? const Icon(Icons.camera_alt):const Icon(Icons.add_call),
+          child:currentIndex == 0 ? const Icon(Icons.chat) : currentIndex ==1 ? const Icon(Icons.camera_alt):const Icon(Icons.add_call),
         ),
       ),
     );

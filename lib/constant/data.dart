@@ -6,7 +6,7 @@ List<Map<String,dynamic>> dummyData = [{
   "massage": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique."
 }, {
   "name": "Fanechka",
-  "image": "https://i.pinimg.com/564x/84/a1/28/84a128588720b5c0001ec174306d7d16.jpg",
+  "image": "https://static.remove.bg/remove-bg-web/5c20d2ecc9ddb1b6c85540a333ec65e2c616dbbd/assets/start-1abfb4fe2980eabfbbaaa4365a0692539f7cd2725f324f904565a9a744f8e214.jpg",
   "unRead": "2",
   "date": "4:22 am",
   "massage": "Duis aliquam convallis nunc."
@@ -36,13 +36,13 @@ List<Map<String,dynamic>> dummyData = [{
   "massage": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula."
 }, {
   "name": "Jeana",
-  "image": "https://i.pinimg.com/736x/62/2f/9d/622f9d0cfaf3bdd69fba4046103363e2.jpg",
+  "image": "https://st2.depositphotos.com/1000393/6507/i/600/depositphotos_65076917-stock-photo-hacker-and-terrorism-fight.jpg",
   "unRead": "1",
   "date": "8:00 am",
   "massage": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue."
 }, {
   "name": "Pren",
-  "image": "https://i.pinimg.com/736x/62/2f/9d/622f9d0cfaf3bdd69fba4046103363e2.jpg",
+  "image": "https://cdn.statusqueen.com/dpimages/thumbnail/Love_Dp-2849.jpg",
   "unRead": "2",
   "date": "8:11 am",
   "massage": "Sed ante. Vivamus tortor."

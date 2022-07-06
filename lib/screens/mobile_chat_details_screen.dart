@@ -20,7 +20,7 @@ class MobileChatDetailsScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             CircleAvatar(
-              radius: size.width * 0.06,
+              radius: size.width * 0.05,
               backgroundImage: NetworkImage(imageUrl),
             ),
             SizedBox(
