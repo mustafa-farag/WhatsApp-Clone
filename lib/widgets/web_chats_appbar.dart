@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/colors.dart';
 
+import '../constant/colors.dart';
 import '../constant/data.dart';
 
 class WebChatsAppBar extends StatelessWidget {
@@ -10,11 +10,11 @@ class WebChatsAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return SizedBox(
-      width: size.width * 0.3,
+      width: size.width * 0.7,
       height: size.height * 0.08,
       child: DecoratedBox(
         decoration: const BoxDecoration(
-          color: appBarColor,
+          color: webAppBarColor,
         ),
         child: Row(
           children: [
@@ -27,18 +27,15 @@ class WebChatsAppBar extends StatelessWidget {
                 radius: size.width * 0.015,
               ),
             ),
+            Padding(
+              padding: EdgeInsets.only(left: size.width * 0.01),
+              child: Text(dummyData[6]['name'],style: textStyle,),
+            ),
             const Spacer(),
             Padding(
               padding: EdgeInsets.only(right: size.width * 0.015),
               child: const Icon(
-                Icons.circle_outlined,
-                color: Colors.grey,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(right: size.width * 0.015),
-              child: const Icon(
-                Icons.chat,
+                Icons.search,
                 color: Colors.grey,
               ),
             ),

@@ -36,7 +36,7 @@ class WebSearchBar extends StatelessWidget {
                   fontSize: 14,
                 ),
                 filled: true,
-                fillColor: appBarColor,
+                fillColor: webAppBarColor,
                 contentPadding: EdgeInsets.symmetric(
                     vertical: 0, horizontal: size.width * 0.03),
                 border: OutlineInputBorder(
