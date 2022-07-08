@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/colors.dart';
-
-import '../constant/data.dart';
+import 'package:responsive_whatsapp_clone/constants/colors.dart';
+import '../constants/data.dart';
 
 class WebContactsAppBar extends StatelessWidget {
   const WebContactsAppBar({Key? key}) : super(key: key);

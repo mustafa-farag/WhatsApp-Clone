@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/colors.dart';
+import 'package:responsive_whatsapp_clone/constants/colors.dart';
 
 class MessageCard extends StatelessWidget {
   final String message;
@@ -12,17 +12,19 @@ class MessageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Align(
       alignment: isMe == false ? Alignment.centerLeft : Alignment.centerRight,
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width - 45,
+          maxWidth: size.width - 45,
         ),
         child: Card(
           elevation: 1,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           color: isMe == false ? webAppBarColor : messageColor,
-          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          margin:
+              EdgeInsets.symmetric(horizontal: size.width * 0.07, vertical: 5),
           child: Stack(
             children: [
               Padding(
@@ -34,15 +36,26 @@ class MessageCard extends StatelessWidget {
                 ),
                 child: Text(
                   message,
-                 style: textStyle,
+                  style: textStyle,
                 ),
               ),
               Positioned(
                 bottom: 2,
                 right: 10,
-                child: Text(
-                  date,
-                  style: messageStyle
+                child: Row(
+                  children: [
+                    Text(date, style: messageStyle),
+                    if (isMe == true)
+                      const SizedBox(
+                        width: 5,
+                      ),
+                    if (isMe == true)
+                      const Icon(
+                        Icons.done_all,
+                        color: Colors.grey,
+                        size: 16,
+                      ),
+                  ],
                 ),
               ),
             ],

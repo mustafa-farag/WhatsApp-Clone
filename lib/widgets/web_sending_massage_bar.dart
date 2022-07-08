@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constant/colors.dart';
+import '../constants/colors.dart';
 
 class WebSendingMassageBar extends StatelessWidget {
   const WebSendingMassageBar({Key? key}) : super(key: key);
@@ -18,10 +18,20 @@ class WebSendingMassageBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
             children: [
-              const Icon(Icons.emoji_emotions,color: Colors.grey,),
-              SizedBox(width: size.width*0.01,),
-              const Icon(Icons.attach_file,color: Colors.grey,),
-              SizedBox(width: size.width*0.01,),
+              const Icon(
+                Icons.emoji_emotions,
+                color: Colors.grey,
+              ),
+              SizedBox(
+                width: size.width * 0.01,
+              ),
+              const Icon(
+                Icons.attach_file,
+                color: Colors.grey,
+              ),
+              SizedBox(
+                width: size.width * 0.01,
+              ),
               Expanded(
                 child: TextField(
                   decoration: InputDecoration(
@@ -40,7 +50,9 @@ class WebSendingMassageBar extends StatelessWidget {
                       )),
                 ),
               ),
-              SizedBox(width: size.width*0.01,),
+              SizedBox(
+                width: size.width * 0.01,
+              ),
               const Icon(
                 Icons.mic,
                 color: Colors.grey,

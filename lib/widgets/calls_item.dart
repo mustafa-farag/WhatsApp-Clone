@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/colors.dart';
+import 'package:responsive_whatsapp_clone/constants/colors.dart';
 
 class CallsItem extends StatelessWidget {
   final String image;

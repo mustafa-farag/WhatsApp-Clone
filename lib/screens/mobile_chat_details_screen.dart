@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/chat_messages.dart';
-import 'package:responsive_whatsapp_clone/constant/colors.dart';
-import 'package:responsive_whatsapp_clone/widgets/massage_item.dart';
+import 'package:responsive_whatsapp_clone/constants/chat_messages.dart';
+import 'package:responsive_whatsapp_clone/constants/colors.dart';
+import 'package:responsive_whatsapp_clone/widgets/message_card.dart';
 
 class MobileChatDetailsScreen extends StatelessWidget {
   final String imageUrl;
@@ -52,12 +52,11 @@ class MobileChatDetailsScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemBuilder: (context, index) => MassageItem(
-                  massage: chats[index]['isMe'] == true
-                      ? chats[index]['me']
-                      : chats[index]['him'],
-                  isMe: chats[index]['isMe']),
-              itemCount: chats.length,
+              itemBuilder: (context, index) => MessageCard(
+                  message: messages[index]['text'],
+                  date: messages[index]['time'],
+                  isMe: messages[index]['isMe']),
+              itemCount: messages.length,
             ),
           ),
           SizedBox(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/colors.dart';
-import 'package:responsive_whatsapp_clone/constant/data.dart';
+import 'package:responsive_whatsapp_clone/constants/colors.dart';
+import 'package:responsive_whatsapp_clone/constants/data.dart';
 import 'package:responsive_whatsapp_clone/widgets/divider.dart';
 import 'package:responsive_whatsapp_clone/widgets/status_item.dart';
 

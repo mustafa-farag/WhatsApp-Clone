@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/data.dart';
+import 'package:responsive_whatsapp_clone/constants/data.dart';
 import 'package:responsive_whatsapp_clone/screens/mobile_chat_details_screen.dart';
 import 'package:responsive_whatsapp_clone/widgets/chat_item.dart';
 import 'package:responsive_whatsapp_clone/widgets/divider.dart';

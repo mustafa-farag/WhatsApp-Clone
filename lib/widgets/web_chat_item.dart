@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_whatsapp_clone/constant/data.dart';
-
-import '../constant/colors.dart';
+import 'package:responsive_whatsapp_clone/constants/data.dart';
+import '../constants/colors.dart';
 
 class WebChatsList extends StatelessWidget {
   const WebChatsList({Key? key}) : super(key: key);
